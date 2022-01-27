@@ -10,9 +10,10 @@ body {
 }
 
 main {
-    padding-top: 100px;
+    position: relative;
+    margin-top: 100px;
     width: 75%;
-    height: 500px;
+    height: 450px;
     display: flex;
     flex-direction: row;
 }
@@ -21,6 +22,16 @@ main {
     width: 80%;
     height: 100%;
     background-color: brown;
+}
+
+.item {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.item.active {
+    display: block;
 }
 
 .container-small {
@@ -32,23 +43,54 @@ main {
     position: relative;
 }
 
+.col-big { 
+    position: relative;
+    margin-right: 20px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.title-img {
+    color: #fff;
+}
+
+.info-img {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 150px;
+}
+
 .col {
     width: 100%;
     height: 20%;
     position: relative;
+    display: none;
+}
+
+.col.active {
+    display: block;
 }
 
 .img-big {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .img-small {
     width: 100%;
     height: 100%;
+    filter: brightness(50%);
 }
 
-.arrow-top {
+.select-img {
+    filter: brightness(100%);
+    border: 2px solid #fff;
+}
+
+.arrow-up {
     position: absolute;
     top: 12px;
     right: 90px;
@@ -58,6 +100,7 @@ main {
     border: 0px solid;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .arrow-down {
@@ -70,6 +113,7 @@ main {
     border: 0px solid;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 1000;
 }
 
 .fa-chevron-up {
